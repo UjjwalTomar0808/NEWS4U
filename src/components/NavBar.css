@@ -1,0 +1,104 @@
+
+.navbar-container {
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .navbar-brand a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand a:hover {
+    color: #ffc107; /* Change the color on hover */
+  }
+  
+  .navbar-toggle {
+    display: none; /* Hide the button by default */
+  }
+  
+  .bar {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  
+  .nav-link {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index:5;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107; /* Change the color on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 900px) {
+    .navbar-brand {
+      flex: 1; /* Take up all available space */
+    }
+
+  
+    .navbar-toggle {
+      display: block; 
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+    }
+  
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        left: 0;
+        z-index:5;
+        background-color: #333;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out; /* Add transition for smoother animation */
+        /* transform: translateY({`${isNavOpen ? '0' : '-100%'}`});  */
+        /* Adjust the value based on your content */
+      }
+  }
+  
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-height: 300px; 
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .navbar-links.open {
+    max-height: 300px; 
+  }
+  
